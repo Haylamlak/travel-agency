@@ -8,9 +8,4 @@ const db = new Pool({
   },
 });
 
-// Test connection when server starts
-db.query("SELECT NOW()")
-  .then(() => console.log("✅ Supabase Connected"))
-  .catch((err) => console.log("❌ DB Error:", err));
-
 module.exports = db;
