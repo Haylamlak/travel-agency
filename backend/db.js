@@ -8,8 +8,8 @@ const db = new Pool({
   },
 });
 
-// TEST CONNECTION (correct way)
-db.connect()
+// Test connection when server starts
+db.query("SELECT NOW()")
   .then(() => console.log("✅ Supabase Connected"))
   .catch((err) => console.log("❌ DB Error:", err));
 
