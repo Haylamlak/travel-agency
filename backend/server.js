@@ -10,10 +10,7 @@ const app = express();
 // ✅ FIX CORS FOR NETLIFY FRONTEND
 app.use(
   cors({
-    origin: [
-      "http://localhost:3000",
-      "https://futurefitagency.netlify.app"
-    ],
+    origin: "https://futurefitagency.netlify.app",
     credentials: true,
   })
 );
