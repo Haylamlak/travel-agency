@@ -7,17 +7,24 @@ const authRoutes = require("./routes/auth");
 
 const app = express();
 
-app.use(cors());
+// ✅ FIX CORS FOR NETLIFY FRONTEND
+app.use(
+  cors({
+    origin: [
+      "http://localhost:3000",
+      "https://futurefitagency.netlify.app"
+    ],
+    credentials: true,
+  })
+);
+
 app.use(express.json());
 
 // routes
 app.use("/api/auth", authRoutes);
 
-// app.listen(5000, () => {
-//   console.log("Server running on port 5000 🚀");
-// });
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT} 🚀`);
+  console.log(`🚀 Server running on port ${PORT}`);
 });
