@@ -1,0 +1,255 @@
+/* ================= GLOBAL ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.jobs-page {
+  padding: 60px 20px;
+  text-align: center;
+  background: #f6f8fc;
+  color: #111;
+}
+
+/* ================= HEADER ================= */
+.jobs-page h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+  animation: fadeDown 0.8s ease;
+}
+
+.subtitle {
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* ================= SEARCH ================= */
+.search {
+  width: 60%;
+  max-width: 500px;
+  padding: 12px 15px;
+  border-radius: 25px;
+  border: 1px solid #ccc;
+  outline: none;
+  margin-bottom: 30px;
+  transition: 0.3s;
+}
+
+.search:focus {
+  border-color: orange;
+  box-shadow: 0 0 10px rgba(255,165,0,0.3);
+}
+
+/* ================= JOB GRID ================= */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+/* ================= JOB CARD ================= */
+.job-card {
+  background: white;
+  padding: 25px;
+  border-radius: 14px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  transition: 0.3s ease;
+  text-align: left;
+  position: relative;
+}
+
+.job-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.job-card h3 {
+  margin-bottom: 10px;
+}
+
+/* ================= TAGS ================= */
+.tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.tags span {
+  background: #f1f1f1;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  transition: 0.3s;
+}
+
+.tags span:hover {
+  background: orange;
+  color: white;
+}
+
+/* ================= SALARY ================= */
+.salary {
+  font-weight: bold;
+  color: orange;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+/* ================= BUTTON ================= */
+.job-card button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 25px;
+  background: orange;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.job-card button:hover {
+  background: darkorange;
+  transform: scale(1.05);
+}
+
+/* ================= FEATURED SECTION ================= */
+.featured {
+  margin-top: 70px;
+  padding: 50px 20px;
+  background: #111;
+  color: white;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.featured h2 {
+  margin-bottom: 20px;
+}
+
+/* FEATURED CARD */
+.featured-card {
+  background: white;
+  color: #111;
+  max-width: 450px;
+  margin: auto;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+
+.featured-card:hover {
+  transform: scale(1.05);
+}
+
+.featured-card h3 {
+  margin-bottom: 10px;
+}
+
+.featured-card p {
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.featured-card span {
+  display: block;
+  color: orange;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.featured-card button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  background: orange;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.featured-card button:hover {
+  background: darkorange;
+  transform: scale(1.05);
+}
+
+/* ================= APPLICATION FORM ================= */
+.apply-section {
+  margin-top: 70px;
+  padding: 50px 20px;
+  text-align: center;
+  background: white;
+}
+
+.apply-section h2 {
+  margin-bottom: 20px;
+}
+
+/* FORM */
+.apply-section form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 400px;
+  margin: auto;
+}
+
+.apply-section input {
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: 0.3s;
+}
+
+.apply-section input:focus {
+  border-color: orange;
+  box-shadow: 0 0 10px rgba(255,165,0,0.3);
+}
+
+/* FORM BUTTON */
+.apply-section button {
+  padding: 12px;
+  border: none;
+  border-radius: 25px;
+  background: orange;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.apply-section button:hover {
+  background: darkorange;
+  transform: scale(1.05);
+}
+
+/* ================= ANIMATIONS ================= */
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .search {
+    width: 90%;
+  }
+
+  .jobs-page h1 {
+    font-size: 26px;
+  }
+
+  .featured-card {
+    width: 90%;
+  }
+}

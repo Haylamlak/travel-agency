@@ -1,0 +1,153 @@
+/* =========================
+   PAGE BACKGROUND
+========================= */
+.auth-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: linear-gradient(135deg, #0f172a, #1e293b, #0f172a);
+  padding: 20px;
+}
+
+/* =========================
+   AUTH CARD
+========================= */
+.auth-card {
+  width: 100%;
+  max-width: 400px;
+
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  border-radius: 16px;
+  padding: 30px;
+
+  color: white;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+
+  animation: fadeIn 0.6s ease;
+}
+
+/* =========================
+   TITLE
+========================= */
+.auth-card h1 {
+  font-size: 26px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* =========================
+   SUBTITLE
+========================= */
+.auth-card p {
+  text-align: center;
+  font-size: 14px;
+  color: #cbd5e1;
+  margin-bottom: 20px;
+}
+
+/* =========================
+   ERROR MESSAGE
+========================= */
+.error {
+  background: rgba(255, 0, 0, 0.15);
+  color: #ff6b6b;
+
+  padding: 10px;
+  border-radius: 8px;
+
+  text-align: center;
+  margin-bottom: 15px;
+
+  font-size: 13px;
+}
+
+/* =========================
+   INPUTS
+========================= */
+.auth-card input {
+  width: 100%;
+
+  padding: 12px 14px;
+  margin-bottom: 12px;
+
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  background: rgba(255, 255, 255, 0.07);
+  color: white;
+
+  outline: none;
+
+  transition: 0.3s ease;
+}
+
+.auth-card input::placeholder {
+  color: #94a3b8;
+}
+
+.auth-card input:focus {
+  border-color: orange;
+  box-shadow: 0 0 8px rgba(255, 165, 0, 0.4);
+}
+
+/* =========================
+   BUTTON
+========================= */
+.auth-card button {
+  width: 100%;
+
+  padding: 12px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: orange;
+  color: black;
+
+  font-weight: bold;
+  font-size: 16px;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+  margin-top: 5px;
+}
+
+.auth-card button:hover {
+  background: #ffb347;
+  transform: translateY(-2px);
+}
+
+/* =========================
+   TOGGLE TEXT
+========================= */
+.auth-card span {
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.auth-card span:hover {
+  text-decoration: underline;
+  color: #60a5fa;
+}
+
+/* =========================
+   ANIMATION
+========================= */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

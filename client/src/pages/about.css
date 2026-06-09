@@ -1,0 +1,247 @@
+/* ================= GLOBAL ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.about-page {
+  background: #f6f8fc;
+  color: #111;
+  line-height: 1.6;
+}
+
+/* ================= HERO ================= */
+.about-hero {
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url("https://source.unsplash.com/1600x900/?airplane,sky") center/cover;
+
+  color: white;
+  animation: fadeIn 1s ease;
+}
+
+.about-hero h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.about-hero p {
+  font-size: 18px;
+  max-width: 700px;
+  margin: auto;
+  opacity: 0.9;
+}
+
+/* ================= IMAGE ================= */
+.about-image {
+  display: flex;
+  justify-content: center;
+  margin-top: -40px;
+}
+
+.about-image img {
+  width: 80%;
+  max-width: 900px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  transition: 0.4s;
+}
+
+.about-image img:hover {
+  transform: scale(1.02);
+}
+
+/* ================= MISSION ================= */
+.mission {
+  text-align: center;
+  padding: 60px 20px;
+  background: white;
+}
+
+.mission h2 {
+  font-size: 30px;
+  margin-bottom: 15px;
+  color: orange;
+}
+
+.mission p {
+  max-width: 800px;
+  margin: auto;
+  font-size: 16px;
+  color: #555;
+}
+
+/* ================= STATS ================= */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.stat-box {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.stat-box:hover {
+  transform: translateY(-8px);
+  background: orange;
+  color: white;
+}
+
+.stat-box h3 {
+  font-size: 28px;
+}
+
+/* ================= STORY ================= */
+.story {
+  padding: 60px 20px;
+  text-align: center;
+  background: #fefefe;
+}
+
+.story h2 {
+  font-size: 30px;
+  margin-bottom: 15px;
+  color: #111;
+}
+
+.story p {
+  max-width: 800px;
+  margin: 10px auto;
+  color: #555;
+}
+
+/* ================= WHY ================= */
+.why {
+  padding: 60px 20px;
+  background: white;
+  text-align: center;
+}
+
+.why h2 {
+  font-size: 30px;
+  margin-bottom: 20px;
+  color: orange;
+}
+
+.why ul {
+  list-style: none;
+  max-width: 600px;
+  margin: auto;
+}
+
+.why li {
+  background: #f4f4f4;
+  margin: 10px 0;
+  padding: 12px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.why li:hover {
+  background: orange;
+  color: white;
+  transform: translateX(5px);
+}
+
+/* ================= TEAM ================= */
+.team {
+  padding: 60px 20px;
+  text-align: center;
+  background: #f6f8fc;
+}
+
+.team h2 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.team-card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.team-card:hover {
+  transform: translateY(-8px);
+  background: #111;
+  color: white;
+}
+
+/* ================= CTA ================= */
+.about-cta {
+  text-align: center;
+  padding: 70px 20px;
+  background: linear-gradient(90deg, #111, #333);
+  color: white;
+}
+
+.about-cta h2 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.about-cta p {
+  margin-bottom: 20px;
+  opacity: 0.9;
+}
+
+.about-cta button {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 25px;
+  background: orange;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.about-cta button:hover {
+  transform: scale(1.05);
+  background: darkorange;
+}
+
+/* ================= ANIMATION ================= */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .about-hero h1 {
+    font-size: 28px;
+  }
+
+  .about-image img {
+    width: 95%;
+  }
+
+  .stat-box {
+    padding: 20px;
+  }
+}
