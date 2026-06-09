@@ -2,17 +2,21 @@ const db = require("../db");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 
+// =========================
 // REGISTER
+// =========================
 exports.register = async (req, res) => {
   try {
     const { name, email, phone, password } = req.body;
 
+    // validation
     if (!name || !email || !phone || !password) {
       return res.status(400).json({
         message: "All fields are required",
       });
     }
 
+    // check user exists
     const existingUser = await db.query(
       "SELECT email FROM users WHERE email = $1",
       [email]
@@ -24,8 +28,10 @@ exports.register = async (req, res) => {
       });
     }
 
+    // hash password
     const hashedPassword = await bcrypt.hash(password, 10);
 
+    // insert user
     await db.query(
       "INSERT INTO users (name, email, phone, password) VALUES ($1, $2, $3, $4)",
       [name, email, phone, hashedPassword]
@@ -36,15 +42,18 @@ exports.register = async (req, res) => {
     });
 
   } catch (error) {
-    console.log(error);
+    console.log("❌ REGISTER ERROR:", error); // IMPORTANT
 
     return res.status(500).json({
-      message: "Server error",
+      message: error.message, // show real error
+      error: error,
     });
   }
 };
 
+// =========================
 // LOGIN
+// =========================
 exports.login = async (req, res) => {
   try {
     const { email, password } = req.body;
@@ -68,10 +77,8 @@ exports.login = async (req, res) => {
 
     const user = result.rows[0];
 
-    const isMatch = await bcrypt.compare(
-      password,
-      user.password
-    );
+    // check password
+    const isMatch = await bcrypt.compare(password, user.password);
 
     if (!isMatch) {
       return res.status(401).json({
@@ -79,6 +86,7 @@ exports.login = async (req, res) => {
       });
     }
 
+    // generate token
     const token = jwt.sign(
       {
         id: user.id,
@@ -101,10 +109,11 @@ exports.login = async (req, res) => {
     });
 
   } catch (error) {
-    console.log(error);
+    console.log("❌ LOGIN ERROR:", error); // IMPORTANT
 
     return res.status(500).json({
-      message: "Server error",
+      message: error.message,
+      error: error,
     });
   }
 };
