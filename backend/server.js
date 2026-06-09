@@ -6,6 +6,7 @@ const cors = require("cors");
 const authRoutes = require("./routes/auth");
 
 const app = express();
+console.log("DATABASE_URL =", process.env.DATABASE_URL);
 
 // ✅ FIX CORS FOR NETLIFY FRONTEND
 app.use(
