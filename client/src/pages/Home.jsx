@@ -63,14 +63,24 @@ export default function Home() {
             Explore The World With Future Fit 🌍
           </h1>
 
-          <iframe
+          {/* <iframe
             width="600"
             height="300"
             src="https://www.youtube.com/embed/H9GqF3B33Qw"
             title="video"
             frameBorder="0"
             allowFullScreen
-          ></iframe>
+          ></iframe> */}
+          <iframe
+  width="560"
+  height="315"
+  src="https://www.youtube.com/embed/8cKBc3wAuQI?start=192"
+  title="YouTube video player"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  referrerpolicy="strict-origin-when-cross-origin"
+  allowfullscreen>
+</iframe>
 
           <p>
             Book flights, hotels, and amazing travel packages at the best prices.
