@@ -85,7 +85,7 @@ export default function Home() {
           </p>
 
           <div className="hero-buttons">
-            <Link to="/services">
+            <Link to="/auth">
               <button>Get Started</button>
             </Link>
 
