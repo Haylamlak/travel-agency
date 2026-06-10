@@ -152,7 +152,8 @@ export default function Home() {
         <div className="contact-boxes">
           <div className="contact-box">
             <h3>📞 Phone</h3>
-            <p>+251 912 275 566</p>
+            <p>Ethiopin: +251 957 378 075</p>
+            <p>Canada: +1-833-688-5566</p>
           </div>
 
           <div className="contact-box">
