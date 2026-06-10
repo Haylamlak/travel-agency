@@ -29,12 +29,12 @@ exports.register = async (req, res) => {
     }
 
     // hash password
-    const hashedPassword = await bcrypt.hash(password, 10);
+    // const hashedPassword = await bcrypt.hash(password, 10);
 
     // insert user
     await db.query(
       "INSERT INTO users (name, email, phone, password) VALUES ($1, $2, $3, $4)",
-      [name, email, phone, hashedPassword]
+      [name, email, phone, password]
     );
 
     return res.status(201).json({
