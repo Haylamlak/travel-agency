@@ -193,7 +193,6 @@ export default function Auth() {
 
         <ul className="doc-list">
           <li>✓ Full Name</li>
-          <li>✓ Passport</li>
           <li>✓ Birth Certificate</li>
           <li>✓ Kebele ID</li>
           <li>✓ Passport Photo</li>

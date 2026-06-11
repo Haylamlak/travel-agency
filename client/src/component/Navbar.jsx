@@ -25,7 +25,7 @@ export default function Navbar() {
           {/* <NavLink to="/contact">Contact</NavLink> */}
 
           {/* AUTH PAGE */}
-          <NavLink to="/auth">Login / Sign Up</NavLink>
+          <NavLink to="/auth">Login / Register</NavLink>
 
         </div>
 
@@ -54,7 +54,6 @@ export default function Navbar() {
         <NavLink onClick={() => setOpen(false)} to="/services">Services</NavLink>
         <NavLink onClick={() => setOpen(false)} to="/jobs">Jobs</NavLink>
         <NavLink onClick={() => setOpen(false)} to="/partnership">Partnership</NavLink>
-        {/* <NavLink onClick={() => setOpen(false)} to="/contact">Contact</NavLink> */}
 
         {/* AUTH */}
         <NavLink onClick={() => setOpen(false)} to="/auth">
