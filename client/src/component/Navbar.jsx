@@ -58,7 +58,7 @@ export default function Navbar() {
 
         {/* AUTH */}
         <NavLink onClick={() => setOpen(false)} to="/auth">
-          Login / Sign Up
+          Login / Register
         </NavLink>
 
       </div>
