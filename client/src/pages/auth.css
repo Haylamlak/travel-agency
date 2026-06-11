@@ -152,103 +152,39 @@
 }
 
 /* =========================
-   SUCCESS MODAL
+   PROFESSIONAL SUCCESS MODAL
 ========================= */
 
 .modal-overlay {
   position: fixed;
   inset: 0;
-
-  background: rgba(0,0,0,0.8);
+  background: rgba(0,0,0,.85);
+  backdrop-filter: blur(8px);
 
   display: flex;
   justify-content: center;
   align-items: center;
 
+  padding: 20px;
   z-index: 9999;
-
-  backdrop-filter: blur(8px);
 }
 
 .success-modal {
-  width: 95%;
-  max-width: 600px;
+  width: 100%;
+  max-width: 650px;
 
-  background: white;
-  color: #111827;
+  background: #ffffff;
+  border-radius: 24px;
 
-  border-radius: 22px;
-  padding: 35px;
+  overflow: hidden;
 
-  text-align: center;
-
-  animation: popup 0.3s ease;
+  animation: popup .35s ease;
 
   box-shadow:
-    0 20px 60px rgba(0,0,0,0.35);
+    0 25px 80px rgba(0,0,0,.4);
 }
 
-.success-icon {
-  font-size: 70px;
-}
-
-.success-modal h2 {
-  color: #059669;
-
-  font-size: 34px;
-  font-weight: 800;
-
-  margin-top: 10px;
-  margin-bottom: 15px;
-}
-
-.success-subtitle {
-  color: #374151;
-
-  font-size: 20px;
-  font-weight: 700;
-
-  margin-bottom: 20px;
-}
-
-.doc-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.doc-list li {
-  padding: 10px;
-
-  font-size: 20px;
-  font-weight: 700;
-
-  border-bottom: 1px solid #e5e7eb;
-}
-
-.telegram-box {
-  margin-top: 25px;
-  margin-bottom: 25px;
-
-  padding: 20px;
-
-  border-radius: 12px;
-
-  background: #eff6ff;
-  border: 2px solid #60a5fa;
-
-  font-size: 22px;
-  font-weight: 700;
-}
-
-.close-btn {
-  width: 100%;
-
-  padding: 16px;
-
-  border: none;
-  border-radius: 12px;
-
+.success-header {
   background:
     linear-gradient(
       135deg,
@@ -257,20 +193,157 @@
     );
 
   color: white;
+
+  text-align: center;
+
+  padding: 40px 30px;
+}
+
+.success-icon {
+  width: 90px;
+  height: 90px;
+
+  margin: auto;
+
+  border-radius: 50%;
+
+  background: rgba(255,255,255,.2);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 50px;
+  font-weight: bold;
+
+  margin-bottom: 20px;
+}
+
+.success-header h2 {
+  font-size: 34px;
+  margin-bottom: 12px;
+}
+
+.success-text {
+  font-size: 18px;
+  line-height: 1.7;
+  color: rgba(255,255,255,.95);
+}
+
+.instruction-box {
+  padding: 30px;
+}
+
+.instruction-box h3 {
+  text-align: center;
+  color: #111827;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.doc-list {
+  list-style: none;
+  padding: 0;
+}
+
+.doc-list li {
+  background: #f8fafc;
+
+  margin-bottom: 12px;
+
+  padding: 14px 18px;
+
+  border-radius: 12px;
+
+  font-size: 18px;
+  font-weight: 600;
+
+  color: #1f2937;
+}
+
+.telegram-box {
+  margin: 0 30px;
+
+  padding: 25px;
+
+  text-align: center;
+
+  border-radius: 16px;
+
+  background: #eff6ff;
+
+  border: 2px solid #3b82f6;
+}
+
+.telegram-box span {
+  display: block;
+
+  font-size: 18px;
+  font-weight: 700;
+
+  color: #1e40af;
+
+  margin-bottom: 10px;
+}
+
+.phone-number {
+  font-size: 32px;
+  font-weight: 900;
+  color: #111827;
+}
+
+.notice-box {
+  margin: 25px 30px;
+
+  padding: 20px;
+
+  background: #fffbeb;
+
+  border-left: 5px solid #f59e0b;
+
+  border-radius: 12px;
+
+  font-size: 17px;
+  line-height: 1.7;
+
+  color: #78350f;
+}
+
+.close-btn {
+  width: calc(100% - 60px);
+
+  margin: 0 30px 30px;
+
+  padding: 18px;
+
+  border: none;
+  border-radius: 14px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #2563eb,
+      #3b82f6
+    );
+
+  color: white;
+
   font-size: 18px;
   font-weight: 700;
 
   cursor: pointer;
+
+  transition: .3s;
 }
 
 .close-btn:hover {
-  opacity: 0.9;
+  transform: translateY(-2px);
 }
 
 @keyframes popup {
   from {
     opacity: 0;
-    transform: scale(0.9);
+    transform: scale(.9);
   }
 
   to {

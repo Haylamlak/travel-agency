@@ -173,52 +173,62 @@ export default function Auth() {
       </form>
 
       {showSuccess && (
-        <div className="modal-overlay">
-          <div className="success-modal">
+  <div className="modal-overlay">
+    <div className="success-modal">
 
-            <div className="success-icon">
-              ✅
-            </div>
+      <div className="success-header">
+        <div className="success-icon">✓</div>
 
-            <h2>
-              Registration Successful!
-            </h2>
+        <h2>Application Submitted Successfully!</h2>
 
-            <p className="success-subtitle">
-              Please send the following documents:
-            </p>
+        <p className="success-text">
+          Thank you for applying to
+          <strong> Future Fit Canada</strong>.
+          Your registration has been received.
+        </p>
+      </div>
 
-            <ul className="doc-list">
-              <li>Full Name</li>
-              <li>Passport</li>
-              <li>Birth Certificate</li>
-              <li>Kebele ID</li>
-              <li>Passport Photo</li>
-              <li>Address</li>
-              <li>Phone Number</li>
-            </ul>
+      <div className="instruction-box">
+        <h3>Required Documents</h3>
 
-            <div className="telegram-box">
-              Telegram / Phone
-              <br />
-              <strong>
-                957 378 075
-              </strong>
-            </div>
+        <ul className="doc-list">
+          <li>✓ Full Name</li>
+          <li>✓ Passport</li>
+          <li>✓ Birth Certificate</li>
+          <li>✓ Kebele ID</li>
+          <li>✓ Passport Photo</li>
+          <li>✓ Address</li>
+          <li>✓ Phone Number</li>
+        </ul>
+      </div>
 
-            <button
-              className="close-btn"
-              onClick={() => {
-                setShowSuccess(false);
-                setIsLogin(true);
-              }}
-            >
-              Continue To Login
-            </button>
+      <div className="telegram-box">
+        <span>Send Documents Via Telegram</span>
 
-          </div>
+        <div className="phone-number">
+          +251 957 378 075
         </div>
-      )}
+      </div>
+
+      <div className="notice-box">
+        After submitting your documents,
+        our team will review your application
+        and contact you with the next steps.
+      </div>
+
+      <button
+        className="close-btn"
+        onClick={() => {
+          setShowSuccess(false);
+          setIsLogin(true);
+        }}
+      >
+        Continue To Login
+      </button>
+
+    </div>
+  </div>
+)}
 
     </div>
   );
